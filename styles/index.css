@@ -29,14 +29,37 @@ body {
   color: #3e52a3;
 }
 
+@media screen and (min-width: 1200px) {
+  main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    min-height: 600px;
+  }
+}
+
 .rt-grid-container {
-  margin: 72px 8.5333333333% 62px;
+  margin: 72px max(8.5333333333%, 50vw - 300px) 62px;
   background: #ffffff;
   box-shadow: 0px 15px 30px rgba(0, 81, 171, 0.148847);
   border-radius: 5px;
 }
+@media screen and (min-width: 1200px) {
+  .rt-grid-container {
+    margin: 0;
+    width: 635px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
 .rt-grid-container .header {
   padding: 28px 24px 32px;
+}
+@media screen and (min-width: 1200px) {
+  .rt-grid-container .header {
+    grid-column: 1/span 2;
+    padding: 40px;
+  }
 }
 .rt-grid-container .header .title {
   font-weight: 700;
@@ -44,6 +67,13 @@ body {
   line-height: 23px;
   letter-spacing: -0.25px;
   color: #2ab3b1;
+}
+@media screen and (min-width: 1200px) {
+  .rt-grid-container .header .title {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.3px;
+  }
 }
 .rt-grid-container .header .subtitle {
   margin-top: 24px;
@@ -53,6 +83,13 @@ body {
   letter-spacing: -0.1875px;
   color: #c0df33;
 }
+@media screen and (min-width: 1200px) {
+  .rt-grid-container .header .subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.225px;
+  }
+}
 .rt-grid-container .header .description {
   margin-top: 16px;
   font-weight: 400;
@@ -61,10 +98,23 @@ body {
   letter-spacing: -0.175px;
   color: #9aa7be;
 }
+@media screen and (min-width: 1200px) {
+  .rt-grid-container .header .description {
+    margin-top: 11px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+  }
+}
 .rt-grid-container .article-subscription {
   padding: 24px;
   background-color: #2ab3b1;
   color: white;
+}
+@media screen and (min-width: 1200px) {
+  .rt-grid-container .article-subscription {
+    padding: 40px 40px 39px;
+  }
 }
 .rt-grid-container .article-subscription .title {
   font-weight: 700;
@@ -118,6 +168,11 @@ body {
   background-color: #2ab3b1;
   color: white;
 }
+@media screen and (min-width: 1200px) {
+  .rt-grid-container .article-why-us {
+    padding: 40px;
+  }
+}
 .rt-grid-container .article-why-us > * {
   position: relative;
   z-index: 1;
@@ -149,4 +204,4 @@ body {
   opacity: 0.75;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22index.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AA4BA;AAAA;AAAA;EAGE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE,kBAvBW;;;AA2BX;EACE;EACA;;AAEF;EACE;;;AAIJ;EACE;EACA;EACA;EACA;;AAEA;EACE;;AACA;EACE;EACA;EACA;EACA;EACA,OAnDC;;AAsDH;EACE;EACA;EACA;EACA;EACA;EACA,OA3DU;;AA8DZ;EACE;EACA;EACA;EACA;EACA;EACA,OAlES;;AAsEb;EACE;EACA,kBA3EG;EA4EH;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EAxHJ,OAyHkB;EAxHlB,QAwHwB;EACpB;EACA;EACA,YAvHU;EAwHV;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA,kBArIG;EAsIH;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA%22,%22file%22:%22index.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22index.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AA4BA;AAAA;AAAA;EAGE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE,kBAvBW;;;AA2BX;EACE;EACA;;AAEF;EACE;;;AA5CF;EAgDF;IAEI;IACA;IACA;IACA;;;;AAIJ;EACE;EACA;EACA;EACA;;AA7DA;EAyDF;IAOI;IACA;IACA;IACA;;;AAGF;EACE;;AAvEF;EAsEA;IAII;IACA;;;AAGF;EACE;EACA;EACA;EACA;EACA,OAzEC;;AAVL;EA8EE;IAQI;IACA;IACA;;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA,OAvFU;;AAXd;EA4FE;IASI;IACA;IACA;;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA,OApGS;;AAbb;EA2GE;IASI;IACA;IACA;IACA;;;AAKN;EACE;EACA,kBApHG;EAqHH;;AA/HF;EA4HA;IAMI;;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EArKJ,OAsKkB;EArKlB,QAqKwB;EACpB;EACA;EACA,YApKU;EAqKV;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA,kBAlLG;EAmLH;;AA7LF;EAyLA;IAOI;;;AAGF;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA%22,%22file%22:%22index.css%22%7D */
